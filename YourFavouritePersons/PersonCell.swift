@@ -10,15 +10,20 @@ import UIKit
 
 class PersonCell: UITableViewCell {
 
+    
+    @IBOutlet weak var personImage: UIImageView!
+    @IBOutlet weak var namePersonLabel: UILabel!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configureCell(person: Person) {
+        namePersonLabel.text = person.namePerson
+        
     }
+
 
 }

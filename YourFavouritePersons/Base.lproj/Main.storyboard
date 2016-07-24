@@ -15,6 +15,8 @@
             <string>CaviarDreams-Bold</string>
             <string>CaviarDreams-Bold</string>
             <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -44,11 +46,23 @@
                                             <segue destination="ZNE-gf-cqj" kind="show" identifier="AddFavouritePerson" id="AJk-UD-yT0"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Favourite Persons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slv-Is-XN2">
+                                        <rect key="frame" x="214" y="46" width="172" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="172" id="95t-BU-Mkc"/>
+                                            <constraint firstAttribute="height" constant="21" id="kYI-oG-3JO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="slv-Is-XN2" secondAttribute="bottom" constant="8" id="AvH-ug-dkK"/>
                                     <constraint firstAttribute="bottom" secondItem="DtU-EW-QcZ" secondAttribute="bottom" constant="8" id="Vex-iL-trU"/>
                                     <constraint firstAttribute="trailing" secondItem="DtU-EW-QcZ" secondAttribute="trailing" constant="8" id="h5M-N1-XNg"/>
+                                    <constraint firstItem="slv-Is-XN2" firstAttribute="centerX" secondItem="vZk-9w-92A" secondAttribute="centerX" id="oOV-wC-ipo"/>
                                     <constraint firstAttribute="height" constant="75" id="uie-qg-3wo"/>
                                 </constraints>
                             </view>
@@ -101,6 +115,10 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="namePersonLabel" destination="JUu-ek-dMC" id="xGn-dv-rIq"/>
+                                            <outlet property="personImage" destination="0ZI-JQ-4xT" id="tbR-rM-UAF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <userDefinedRuntimeAttributes>
@@ -121,6 +139,9 @@
                             <constraint firstItem="PQ6-uL-Lp4" firstAttribute="top" secondItem="vZk-9w-92A" secondAttribute="bottom" constant="8" id="rFj-zc-8eu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="PQ6-uL-Lp4" id="8M3-hR-JKS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,13 +172,28 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="ZNE-gf-cqj" eventType="touchUpInside" id="mMs-rx-PJE"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Favourite Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-T6-r9G">
+                                        <rect key="frame" x="209" y="46" width="182" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="182" id="AVj-IR-GX3"/>
+                                            <constraint firstAttribute="height" constant="21" id="arD-W2-beW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="mKy-uf-SN4" firstAttribute="leading" secondItem="ePh-a2-Ht3" secondAttribute="leading" constant="8" id="Kas-4D-lmW"/>
+                                    <constraint firstItem="XKJ-T6-r9G" firstAttribute="centerX" secondItem="ePh-a2-Ht3" secondAttribute="centerX" id="MGu-3g-iqZ"/>
                                     <constraint firstAttribute="bottom" secondItem="mKy-uf-SN4" secondAttribute="bottom" constant="8" id="bLV-Ml-ZQW"/>
                                     <constraint firstAttribute="height" constant="75" id="orn-hc-bKy"/>
+                                    <constraint firstAttribute="bottom" secondItem="XKJ-T6-r9G" secondAttribute="bottom" constant="8" id="ymS-NE-bI8"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mAu-OX-jX9">
@@ -218,6 +254,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="makePostButton:" destination="ZNE-gf-cqj" eventType="touchUpInside" id="iB4-3D-8fS"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lem-eC-VUM">
                                 <rect key="frame" x="200" y="301" width="200" height="30"/>
@@ -255,12 +294,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnD-qz-COn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfa-5j-MGi">
                                 <rect key="frame" x="213" y="85" width="175" height="175"/>
                                 <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="12"/>
                                 <state key="normal" title="+ Add your Favourite Person">
                                     <color key="titleColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPictureButton:" destination="ZNE-gf-cqj" eventType="touchUpInside" id="rd1-PC-2ju"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="g60-aS-0ES">
                                 <rect key="frame" x="175" y="367" width="250" height="42"/>
@@ -285,30 +327,37 @@
                             <constraint firstItem="FMY-eH-GjZ" firstAttribute="top" secondItem="lXc-wX-yWl" secondAttribute="bottom" constant="20" id="61a-xp-v8a"/>
                             <constraint firstItem="Lem-eC-VUM" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="63k-f6-0WI"/>
                             <constraint firstItem="odx-d0-Ohf" firstAttribute="top" secondItem="Lem-eC-VUM" secondAttribute="bottom" constant="10" id="6S9-xe-SIt"/>
-                            <constraint firstItem="rnD-qz-COn" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="6xm-mk-jn5"/>
                             <constraint firstItem="Yoh-pO-DZX" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="7Qh-be-Al4"/>
                             <constraint firstItem="ePh-a2-Ht3" firstAttribute="leading" secondItem="ofs-TH-yy4" secondAttribute="leading" id="8xo-ln-sfW"/>
                             <constraint firstItem="TUY-6x-Laj" firstAttribute="top" secondItem="g60-aS-0ES" secondAttribute="bottom" constant="10" id="EKx-Ws-cgG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lXc-wX-yWl" secondAttribute="trailing" id="F3N-Jb-ZI2"/>
                             <constraint firstItem="k3h-H0-rBh" firstAttribute="top" secondItem="mAu-OX-jX9" secondAttribute="bottom" constant="15" id="FED-uw-69h"/>
-                            <constraint firstItem="rnD-qz-COn" firstAttribute="width" secondItem="mAu-OX-jX9" secondAttribute="width" id="K6w-JX-dYj"/>
                             <constraint firstItem="k3h-H0-rBh" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="MQP-oO-8U8"/>
+                            <constraint firstItem="pfa-5j-MGi" firstAttribute="height" secondItem="mAu-OX-jX9" secondAttribute="height" id="P4d-YV-KVU"/>
                             <constraint firstItem="TRS-3l-Bda" firstAttribute="top" secondItem="TUY-6x-Laj" secondAttribute="bottom" constant="5" id="PN6-9s-PVF"/>
                             <constraint firstItem="g60-aS-0ES" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="TMg-FW-6Kq"/>
                             <constraint firstItem="TRS-3l-Bda" firstAttribute="trailing" secondItem="ofs-TH-yy4" secondAttribute="trailingMargin" id="Tzi-lL-jEY"/>
                             <constraint firstItem="Yoh-pO-DZX" firstAttribute="top" secondItem="TRS-3l-Bda" secondAttribute="bottom" constant="10" id="Zvp-gI-nTT"/>
-                            <constraint firstItem="rnD-qz-COn" firstAttribute="top" secondItem="ePh-a2-Ht3" secondAttribute="bottom" constant="10" id="cKO-TJ-261"/>
                             <constraint firstItem="lXc-wX-yWl" firstAttribute="top" secondItem="Yoh-pO-DZX" secondAttribute="bottom" constant="5" id="fiC-4z-PLc"/>
+                            <constraint firstItem="pfa-5j-MGi" firstAttribute="centerX" secondItem="mAu-OX-jX9" secondAttribute="centerX" id="gdd-vQ-LKe"/>
                             <constraint firstAttribute="trailing" secondItem="ePh-a2-Ht3" secondAttribute="trailing" id="hF2-3B-9sw"/>
                             <constraint firstItem="Lem-eC-VUM" firstAttribute="top" secondItem="k3h-H0-rBh" secondAttribute="bottom" constant="5" id="hje-cp-zis"/>
                             <constraint firstItem="mAu-OX-jX9" firstAttribute="top" secondItem="ePh-a2-Ht3" secondAttribute="bottom" constant="10" id="kMB-EN-wXr"/>
                             <constraint firstItem="lXc-wX-yWl" firstAttribute="leading" secondItem="ofs-TH-yy4" secondAttribute="leadingMargin" id="kh8-KQ-xcE"/>
-                            <constraint firstItem="rnD-qz-COn" firstAttribute="height" secondItem="mAu-OX-jX9" secondAttribute="height" id="qd6-yD-ojI"/>
+                            <constraint firstItem="pfa-5j-MGi" firstAttribute="width" secondItem="mAu-OX-jX9" secondAttribute="width" id="rzO-Cw-d0Y"/>
+                            <constraint firstItem="pfa-5j-MGi" firstAttribute="centerY" secondItem="mAu-OX-jX9" secondAttribute="centerY" id="tX0-sG-jLj"/>
                             <constraint firstItem="mAu-OX-jX9" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="vLE-kC-T6A"/>
                             <constraint firstItem="odx-d0-Ohf" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="xMu-45-bil"/>
                             <constraint firstItem="ePh-a2-Ht3" firstAttribute="top" secondItem="ofs-TH-yy4" secondAttribute="top" id="ypS-RJ-zd3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateOfBirthDatePicker" destination="g60-aS-0ES" id="XnI-wu-0Zf"/>
+                        <outlet property="favouriteQuoteTextfield" destination="lXc-wX-yWl" id="XZ4-RQ-GeT"/>
+                        <outlet property="nameField" destination="Lem-eC-VUM" id="N9b-Qh-blJ"/>
+                        <outlet property="personDescriptionTextField" destination="TRS-3l-Bda" id="9Y6-0S-5Xc"/>
+                        <outlet property="personImage" destination="mAu-OX-jX9" id="qb8-Kc-eEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezn-x2-i1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
