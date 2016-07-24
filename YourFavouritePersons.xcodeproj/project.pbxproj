@@ -54,6 +54,12 @@
 		85B207C81D44CC990015741C /* YourFavouritePersons */ = {
 			isa = PBXGroup;
 			children = (
+				85B207E01D44CD5D0015741C /* Dataservices */,
+				85B207DF1D44CD570015741C /* Utilities */,
+				85B207DE1D44CD500015741C /* Resources */,
+				85B207DD1D44CCFD0015741C /* Model */,
+				85B207DC1D44CCF50015741C /* View */,
+				85B207DB1D44CCA20015741C /* Controller */,
 				85B207C91D44CC990015741C /* AppDelegate.swift */,
 				85B207CB1D44CC990015741C /* ViewController.swift */,
 				85B207CD1D44CC990015741C /* Main.storyboard */,
@@ -62,6 +68,48 @@
 				85B207D51D44CC990015741C /* Info.plist */,
 			);
 			path = YourFavouritePersons;
+			sourceTree = "<group>";
+		};
+		85B207DB1D44CCA20015741C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		85B207DC1D44CCF50015741C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		85B207DD1D44CCFD0015741C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		85B207DE1D44CD500015741C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		85B207DF1D44CD570015741C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		85B207E01D44CD5D0015741C /* Dataservices */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dataservices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
