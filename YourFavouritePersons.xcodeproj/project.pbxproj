@@ -12,6 +12,11 @@
 		85B207CF1D44CC990015741C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B207CD1D44CC990015741C /* Main.storyboard */; };
 		85B207D11D44CC990015741C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85B207D01D44CC990015741C /* Assets.xcassets */; };
 		85B207D41D44CC990015741C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B207D21D44CC990015741C /* LaunchScreen.storyboard */; };
+		85B207E71D44CFD00015741C /* CaviarDreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E31D44CFD00015741C /* CaviarDreams_Bold.ttf */; };
+		85B207E81D44CFD00015741C /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E41D44CFD00015741C /* CaviarDreams_BoldItalic.ttf */; };
+		85B207E91D44CFD00015741C /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E51D44CFD00015741C /* CaviarDreams_Italic.ttf */; };
+		85B207EA1D44CFD00015741C /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E61D44CFD00015741C /* CaviarDreams.ttf */; };
+		85B207ED1D44D04D0015741C /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207EC1D44D04D0015741C /* BebasNeue.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		85B207D01D44CC990015741C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85B207D31D44CC990015741C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85B207D51D44CC990015741C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85B207E31D44CFD00015741C /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
+		85B207E41D44CFD00015741C /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
+		85B207E51D44CFD00015741C /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
+		85B207E61D44CFD00015741C /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		85B207EC1D44D04D0015741C /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		85B207DE1D44CD500015741C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				85B207E11D44CFB50015741C /* Fonts */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -110,6 +121,34 @@
 			children = (
 			);
 			name = Dataservices;
+			sourceTree = "<group>";
+		};
+		85B207E11D44CFB50015741C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				85B207EB1D44D0320015741C /* BebasNeue */,
+				85B207E21D44CFBA0015741C /* CaviarDreams */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		85B207E21D44CFBA0015741C /* CaviarDreams */ = {
+			isa = PBXGroup;
+			children = (
+				85B207E31D44CFD00015741C /* CaviarDreams_Bold.ttf */,
+				85B207E41D44CFD00015741C /* CaviarDreams_BoldItalic.ttf */,
+				85B207E51D44CFD00015741C /* CaviarDreams_Italic.ttf */,
+				85B207E61D44CFD00015741C /* CaviarDreams.ttf */,
+			);
+			name = CaviarDreams;
+			sourceTree = "<group>";
+		};
+		85B207EB1D44D0320015741C /* BebasNeue */ = {
+			isa = PBXGroup;
+			children = (
+				85B207EC1D44D04D0015741C /* BebasNeue.otf */,
+			);
+			name = BebasNeue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +212,11 @@
 				85B207D41D44CC990015741C /* LaunchScreen.storyboard in Resources */,
 				85B207D11D44CC990015741C /* Assets.xcassets in Resources */,
 				85B207CF1D44CC990015741C /* Main.storyboard in Resources */,
+				85B207EA1D44CFD00015741C /* CaviarDreams.ttf in Resources */,
+				85B207E81D44CFD00015741C /* CaviarDreams_BoldItalic.ttf in Resources */,
+				85B207E91D44CFD00015741C /* CaviarDreams_Italic.ttf in Resources */,
+				85B207ED1D44D04D0015741C /* BebasNeue.otf in Resources */,
+				85B207E71D44CFD00015741C /* CaviarDreams_Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
