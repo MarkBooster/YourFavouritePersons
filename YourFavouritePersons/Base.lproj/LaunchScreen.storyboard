@@ -4,13 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <mutableArray key="CaviarDreams_Bold.ttf">
-            <string>CaviarDreams-Bold</string>
-            <string>CaviarDreams-Bold</string>
-            <string>CaviarDreams-Bold</string>
-        </mutableArray>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -26,52 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ik3-zh-kne">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eZD-6x-xuL">
-                                        <rect key="frame" x="220" y="233" width="160" height="134"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEx-KW-TgM">
-                                                <rect key="frame" x="42" y="0.0" width="77" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="77" id="3Nc-SL-Pow"/>
-                                                    <constraint firstAttribute="height" constant="45" id="JoI-Yh-94f"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNR-Av-u2G">
-                                                <rect key="frame" x="0.0" y="45" width="160" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Yxy-sv-h5x"/>
-                                                    <constraint firstAttribute="width" constant="160" id="yDj-hu-XCg"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Persons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTe-bV-UM1">
-                                                <rect key="frame" x="18" y="90" width="124" height="44"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="44" id="CtQ-oV-7dm"/>
-                                                    <constraint firstAttribute="width" constant="124" id="IpL-fJ-BK6"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="134" id="6Z3-rq-a7V"/>
-                                            <constraint firstAttribute="width" constant="160" id="Kfs-98-zN2"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="eZD-6x-xuL" firstAttribute="centerX" secondItem="Ik3-zh-kne" secondAttribute="centerX" id="1OW-T8-NMo"/>
-                                    <constraint firstItem="eZD-6x-xuL" firstAttribute="centerY" secondItem="Ik3-zh-kne" secondAttribute="centerY" id="OJa-Ks-7Xe"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

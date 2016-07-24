@@ -17,11 +17,11 @@ class PersonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     func configureCell(person: Person) {
         namePersonLabel.text = person.namePerson
+        personImage.image = DataService.instance.imageForPath(person.imagePath)
         
     }
 

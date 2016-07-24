@@ -70,7 +70,7 @@
                                 <rect key="frame" x="20" y="83" width="560" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="92" id="IWc-cf-z9S" customClass="PersonCell" customModule="YourFavouritePersons" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PersonCell" rowHeight="92" id="IWc-cf-z9S" customClass="PersonCell" customModule="YourFavouritePersons" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="560" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IWc-cf-z9S" id="FXG-Dw-4DL">
@@ -229,7 +229,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUY-6x-Laj">
-                                <rect key="frame" x="242" y="419" width="117" height="21"/>
+                                <rect key="frame" x="242" y="417" width="117" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="117" id="qlf-dh-WLC"/>
                                     <constraint firstAttribute="height" constant="21" id="wCX-0K-MOY"/>
@@ -239,7 +239,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMY-eH-GjZ">
-                                <rect key="frame" x="155" y="561" width="291" height="30"/>
+                                <rect key="frame" x="155" y="559" width="291" height="30"/>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="OFk-Gx-O3u"/>
@@ -268,7 +268,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Quote:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoh-pO-DZX">
-                                <rect key="frame" x="216" y="485" width="169" height="21"/>
+                                <rect key="frame" x="216" y="483" width="169" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="2oL-Ap-pSg"/>
                                     <constraint firstAttribute="width" constant="169" id="Eft-c4-E98"/>
@@ -278,7 +278,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter here a description about your Favourite Person" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-3l-Bda">
-                                <rect key="frame" x="20" y="445" width="560" height="30"/>
+                                <rect key="frame" x="20" y="443" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GeR-6j-HpJ"/>
                                 </constraints>
@@ -286,7 +286,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a your Favourite Quote from you Favourite Person" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lXc-wX-yWl">
-                                <rect key="frame" x="20" y="511" width="560" height="30"/>
+                                <rect key="frame" x="20" y="509" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="R1v-xo-Pow"/>
                                     <constraint firstAttribute="width" constant="560" id="TIQ-NQ-4ct"/>
@@ -304,40 +304,36 @@
                                     <action selector="addPictureButton:" destination="ZNE-gf-cqj" eventType="touchUpInside" id="rd1-PC-2ju"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="g60-aS-0ES">
-                                <rect key="frame" x="175" y="367" width="250" height="42"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgl-b4-qRu">
+                                <rect key="frame" x="252" y="372" width="97" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="DzM-mO-wY3"/>
-                                    <constraint firstAttribute="height" constant="42" id="WQs-GL-X3O"/>
+                                    <constraint firstAttribute="width" constant="97" id="gtw-z0-lCN"/>
+                                    <constraint firstAttribute="height" constant="30" id="rLf-iP-kmr"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="491054888.39276397">
-                                    <!--2016-07-24 12:08:08 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-2556231572">
-                                    <!--1919-12-31 23:40:28 +0000-->
-                                </date>
-                            </datePicker>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TRS-3l-Bda" firstAttribute="leading" secondItem="ofs-TH-yy4" secondAttribute="leadingMargin" id="02u-PN-o51"/>
                             <constraint firstItem="TUY-6x-Laj" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="1Lk-ST-tb5"/>
-                            <constraint firstItem="g60-aS-0ES" firstAttribute="top" secondItem="odx-d0-Ohf" secondAttribute="bottom" constant="5" id="23E-GX-vT7"/>
+                            <constraint firstItem="pgl-b4-qRu" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="2Oa-j1-8As"/>
                             <constraint firstItem="FMY-eH-GjZ" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="4fP-UF-GNE"/>
                             <constraint firstItem="FMY-eH-GjZ" firstAttribute="top" secondItem="lXc-wX-yWl" secondAttribute="bottom" constant="20" id="61a-xp-v8a"/>
                             <constraint firstItem="Lem-eC-VUM" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="63k-f6-0WI"/>
                             <constraint firstItem="odx-d0-Ohf" firstAttribute="top" secondItem="Lem-eC-VUM" secondAttribute="bottom" constant="10" id="6S9-xe-SIt"/>
                             <constraint firstItem="Yoh-pO-DZX" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="7Qh-be-Al4"/>
                             <constraint firstItem="ePh-a2-Ht3" firstAttribute="leading" secondItem="ofs-TH-yy4" secondAttribute="leading" id="8xo-ln-sfW"/>
-                            <constraint firstItem="TUY-6x-Laj" firstAttribute="top" secondItem="g60-aS-0ES" secondAttribute="bottom" constant="10" id="EKx-Ws-cgG"/>
+                            <constraint firstItem="TUY-6x-Laj" firstAttribute="top" secondItem="pgl-b4-qRu" secondAttribute="bottom" constant="15" id="EJc-0W-17J"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lXc-wX-yWl" secondAttribute="trailing" id="F3N-Jb-ZI2"/>
                             <constraint firstItem="k3h-H0-rBh" firstAttribute="top" secondItem="mAu-OX-jX9" secondAttribute="bottom" constant="15" id="FED-uw-69h"/>
                             <constraint firstItem="k3h-H0-rBh" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="MQP-oO-8U8"/>
                             <constraint firstItem="pfa-5j-MGi" firstAttribute="height" secondItem="mAu-OX-jX9" secondAttribute="height" id="P4d-YV-KVU"/>
                             <constraint firstItem="TRS-3l-Bda" firstAttribute="top" secondItem="TUY-6x-Laj" secondAttribute="bottom" constant="5" id="PN6-9s-PVF"/>
-                            <constraint firstItem="g60-aS-0ES" firstAttribute="centerX" secondItem="ofs-TH-yy4" secondAttribute="centerX" id="TMg-FW-6Kq"/>
                             <constraint firstItem="TRS-3l-Bda" firstAttribute="trailing" secondItem="ofs-TH-yy4" secondAttribute="trailingMargin" id="Tzi-lL-jEY"/>
                             <constraint firstItem="Yoh-pO-DZX" firstAttribute="top" secondItem="TRS-3l-Bda" secondAttribute="bottom" constant="10" id="Zvp-gI-nTT"/>
+                            <constraint firstItem="pgl-b4-qRu" firstAttribute="top" secondItem="odx-d0-Ohf" secondAttribute="bottom" constant="10" id="fPf-p6-wYA"/>
                             <constraint firstItem="lXc-wX-yWl" firstAttribute="top" secondItem="Yoh-pO-DZX" secondAttribute="bottom" constant="5" id="fiC-4z-PLc"/>
                             <constraint firstItem="pfa-5j-MGi" firstAttribute="centerX" secondItem="mAu-OX-jX9" secondAttribute="centerX" id="gdd-vQ-LKe"/>
                             <constraint firstAttribute="trailing" secondItem="ePh-a2-Ht3" secondAttribute="trailing" id="hF2-3B-9sw"/>
@@ -352,7 +348,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dateOfBirthDatePicker" destination="g60-aS-0ES" id="XnI-wu-0Zf"/>
+                        <outlet property="dateTextField" destination="pgl-b4-qRu" id="zdd-DX-Q3Y"/>
                         <outlet property="favouriteQuoteTextfield" destination="lXc-wX-yWl" id="XZ4-RQ-GeT"/>
                         <outlet property="nameField" destination="Lem-eC-VUM" id="N9b-Qh-blJ"/>
                         <outlet property="personDescriptionTextField" destination="TRS-3l-Bda" id="9Y6-0S-5Xc"/>

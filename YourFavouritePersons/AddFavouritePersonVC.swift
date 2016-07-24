@@ -12,7 +12,7 @@ class AddFavouritePersonVC: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var dateOfBirthDatePicker: UIDatePicker!
+    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var personDescriptionTextField: UITextField!
     @IBOutlet weak var favouriteQuoteTextfield: UITextField!
     
@@ -38,8 +38,13 @@ class AddFavouritePersonVC: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func makePostButton(sender: AnyObject) {
-        if let name = nameField.text, let age = dateOfBirthDatePicker.textInputMode, let desc = personDescriptionTextField.text, let quote = favouriteQuoteTextfield.text, let img = personImage.image {
+        if let name = nameField.text, let age = dateTextField.text, let desc = personDescriptionTextField.text, let quote = favouriteQuoteTextfield.text, let img = personImage.image {
             
+            let imgPath = DataService.instance.saveImageAndCreatePath(img)
+            
+            let person = Person(imagePath: imgPath, namePerson: name, personDateOfBirth: age, personDescription: desc, personQuote: quote)
+            DataService.instance.addPerson(person)
+            dismissViewControllerAnimated(true, completion: nil)
         }
         
     }

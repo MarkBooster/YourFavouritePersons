@@ -22,6 +22,7 @@
 		85E09B581D44EC9D00EF6310 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B571D44EC9D00EF6310 /* Person.swift */; };
 		85E09B5A1D44ECBD00EF6310 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B591D44ECBD00EF6310 /* DataService.swift */; };
 		85E09B5C1D44ECFF00EF6310 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B5B1D44ECFF00EF6310 /* PersonCell.swift */; };
+		85E09B5E1D45158700EF6310 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B5D1D45158700EF6310 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		85E09B571D44EC9D00EF6310 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		85E09B591D44ECBD00EF6310 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		85E09B5B1D44ECFF00EF6310 /* PersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		85E09B5D1D45158700EF6310 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +83,7 @@
 				85B207DC1D44CCF50015741C /* View */,
 				85B207DB1D44CCA20015741C /* Controller */,
 				85B207C91D44CC990015741C /* AppDelegate.swift */,
-				85B207CD1D44CC990015741C /* Main.storyboard */,
 				85B207D01D44CC990015741C /* Assets.xcassets */,
-				85B207D21D44CC990015741C /* LaunchScreen.storyboard */,
 				85B207D51D44CC990015741C /* Info.plist */,
 			);
 			path = YourFavouritePersons;
@@ -103,6 +103,8 @@
 			children = (
 				85E09B531D44E12300EF6310 /* UIStylingView.swift */,
 				85E09B5B1D44ECFF00EF6310 /* PersonCell.swift */,
+				85B207CD1D44CC990015741C /* Main.storyboard */,
+				85B207D21D44CC990015741C /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				85E09B571D44EC9D00EF6310 /* Person.swift */,
+				85E09B5D1D45158700EF6310 /* Constants.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				85E09B541D44E12300EF6310 /* UIStylingView.swift in Sources */,
 				85E09B561D44EC2E00EF6310 /* AddFavouritePersonVC.swift in Sources */,
 				85E09B5C1D44ECFF00EF6310 /* PersonCell.swift in Sources */,
+				85E09B5E1D45158700EF6310 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

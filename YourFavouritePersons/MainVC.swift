@@ -19,6 +19,9 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        DataService.instance.loadPersons()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainVC.onPersonsLoaded(_:)), name: "personsLoaded", object: nil)
         
     }
     
@@ -27,12 +30,12 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return persons.count
+        return DataService.instance.loadedPersons.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let person = persons[indexPath.row]
+        let person = DataService.instance.loadedPersons[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PersonCell") as? PersonCell {
             cell.configureCell(person)
             return cell
@@ -49,6 +52,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+    }
+    
+    func onPersonsLoaded(notif: AnyObject) {
+        tableView.reloadData()
     }
     
 }
