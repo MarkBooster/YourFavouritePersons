@@ -17,6 +17,7 @@
 		85B207E91D44CFD00015741C /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E51D44CFD00015741C /* CaviarDreams_Italic.ttf */; };
 		85B207EA1D44CFD00015741C /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207E61D44CFD00015741C /* CaviarDreams.ttf */; };
 		85B207ED1D44D04D0015741C /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 85B207EC1D44D04D0015741C /* BebasNeue.otf */; };
+		85BEC8481D460AE9004B9223 /* PersonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BEC8471D460AE9004B9223 /* PersonDetailVC.swift */; };
 		85E09B541D44E12300EF6310 /* UIStylingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B531D44E12300EF6310 /* UIStylingView.swift */; };
 		85E09B561D44EC2E00EF6310 /* AddFavouritePersonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B551D44EC2E00EF6310 /* AddFavouritePersonVC.swift */; };
 		85E09B581D44EC9D00EF6310 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E09B571D44EC9D00EF6310 /* Person.swift */; };
@@ -38,6 +39,7 @@
 		85B207E51D44CFD00015741C /* CaviarDreams_Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Italic.ttf; sourceTree = "<group>"; };
 		85B207E61D44CFD00015741C /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		85B207EC1D44D04D0015741C /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
+		85BEC8471D460AE9004B9223 /* PersonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailVC.swift; sourceTree = "<group>"; };
 		85E09B531D44E12300EF6310 /* UIStylingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStylingView.swift; sourceTree = "<group>"; };
 		85E09B551D44EC2E00EF6310 /* AddFavouritePersonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFavouritePersonVC.swift; sourceTree = "<group>"; };
 		85E09B571D44EC9D00EF6310 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				85B207CB1D44CC990015741C /* MainVC.swift */,
 				85E09B551D44EC2E00EF6310 /* AddFavouritePersonVC.swift */,
+				85BEC8471D460AE9004B9223 /* PersonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				85E09B561D44EC2E00EF6310 /* AddFavouritePersonVC.swift in Sources */,
 				85E09B5C1D44ECFF00EF6310 /* PersonCell.swift in Sources */,
 				85E09B5E1D45158700EF6310 /* Constants.swift in Sources */,
+				85BEC8481D460AE9004B9223 /* PersonDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

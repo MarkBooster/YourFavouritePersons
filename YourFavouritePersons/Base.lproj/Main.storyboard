@@ -6,7 +6,19 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="CaviarDreams.ttf">
+            <string>CaviarDreams</string>
+            <string>CaviarDreams</string>
+        </mutableArray>
         <mutableArray key="CaviarDreams_Bold.ttf">
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
+            <string>CaviarDreams-Bold</string>
             <string>CaviarDreams-Bold</string>
             <string>CaviarDreams-Bold</string>
             <string>CaviarDreams-Bold</string>
@@ -118,6 +130,7 @@
                                         <connections>
                                             <outlet property="namePersonLabel" destination="JUu-ek-dMC" id="xGn-dv-rIq"/>
                                             <outlet property="personImage" destination="0ZI-JQ-4xT" id="tbR-rM-UAF"/>
+                                            <segue destination="FhD-Kl-4ox" kind="show" id="sef-D9-0Cx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -147,6 +160,264 @@
             </objects>
             <point key="canvasLocation" x="280" y="312"/>
         </scene>
+        <!--Person DetailVC-->
+        <scene sceneID="ZAs-Jy-LnQ">
+            <objects>
+                <viewController id="FhD-Kl-4ox" customClass="PersonDetailVC" customModule="YourFavouritePersons" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CVs-d8-1nr"/>
+                        <viewControllerLayoutGuide type="bottom" id="bny-1H-14I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ATy-Uo-ia9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M53-NG-9u0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndH-zL-Dck">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="900"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dye-qB-D1o">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Favourite Persons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oud-ql-kGh">
+                                                        <rect key="frame" x="205" y="46" width="190" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="172" id="mV5-x4-YUW"/>
+                                                            <constraint firstAttribute="width" constant="190" id="n0P-wt-A3Y"/>
+                                                            <constraint firstAttribute="height" constant="21" id="sXS-1s-qr9"/>
+                                                            <constraint firstAttribute="height" constant="21" id="zov-xL-rIc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="mV5-x4-YUW"/>
+                                                                <exclude reference="zov-xL-rIc"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJf-jy-Rxe">
+                                                        <rect key="frame" x="8" y="49" width="33" height="18"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="7Si-F2-h2P"/>
+                                                            <constraint firstAttribute="width" constant="33" id="AWm-Fb-9L0"/>
+                                                            <constraint firstAttribute="width" constant="46" id="C9E-XG-eVu"/>
+                                                            <constraint firstAttribute="height" constant="18" id="vh6-ik-aqC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="13"/>
+                                                        <state key="normal" title="Back">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="7Si-F2-h2P"/>
+                                                                <exclude reference="C9E-XG-eVu"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="backButton:" destination="FhD-Kl-4ox" eventType="touchUpInside" id="T3U-lD-PRX"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Oud-ql-kGh" secondAttribute="bottom" constant="8" id="0JU-Kq-gic"/>
+                                                    <constraint firstAttribute="height" constant="75" id="1vn-VP-Rpt"/>
+                                                    <constraint firstItem="Oud-ql-kGh" firstAttribute="centerX" secondItem="dye-qB-D1o" secondAttribute="centerX" id="1xp-Fo-Umz"/>
+                                                    <constraint firstItem="AJf-jy-Rxe" firstAttribute="leading" secondItem="dye-qB-D1o" secondAttribute="leading" constant="8" id="KXF-0O-wOK"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AJf-jy-Rxe" secondAttribute="bottom" constant="8" id="QHy-hd-Tmc"/>
+                                                    <constraint firstItem="Oud-ql-kGh" firstAttribute="centerX" secondItem="dye-qB-D1o" secondAttribute="centerX" id="j1c-36-xOR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Oud-ql-kGh" secondAttribute="bottom" constant="8" id="yep-aN-rDd"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="0JU-Kq-gic"/>
+                                                        <exclude reference="1xp-Fo-Umz"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsQ-Px-yfU">
+                                                <rect key="frame" x="272" y="85" width="56" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="8FX-VV-MxS"/>
+                                                    <constraint firstAttribute="width" constant="56" id="kwm-ik-Yek"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oix-nW-q8r">
+                                                <rect key="frame" x="175" y="111" width="250" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="2A6-dG-eeD"/>
+                                                    <constraint firstAttribute="height" constant="21" id="WvT-62-sVJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcM-jb-QnQ">
+                                                <rect key="frame" x="220" y="152" width="161" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="6Ei-rf-9Ac"/>
+                                                    <constraint firstAttribute="width" constant="161" id="RgQ-ZB-djB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favourite Quote" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="klK-0I-Udd">
+                                                <rect key="frame" x="220" y="624" width="161" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="161" id="6Uv-jl-BTe"/>
+                                                    <constraint firstAttribute="height" constant="26" id="H3L-rA-1kn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIt-I0-v7I">
+                                                <rect key="frame" x="197" y="404" width="206" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="kQi-Dq-hCb"/>
+                                                    <constraint firstAttribute="width" constant="206" id="mwq-ip-EWm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Favourite Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtH-qT-wSK">
+                                                <rect key="frame" x="163" y="445" width="275" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="b7k-Px-iwv"/>
+                                                    <constraint firstAttribute="width" constant="275" id="baF-Qy-0Nw"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-bc-gYC">
+                                                <rect key="frame" x="240" y="373" width="121" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="Wrt-A9-cCi"/>
+                                                    <constraint firstAttribute="width" constant="121" id="xPh-9n-7GH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pCY-tv-M93">
+                                                <rect key="frame" x="213" y="183" width="175" height="175"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="175" id="SSP-ml-PeO"/>
+                                                    <constraint firstAttribute="width" constant="175" id="qye-bT-KuK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J3Y-U2-NLM">
+                                                <rect key="frame" x="8" y="476" width="584" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="FTd-h2-XUC"/>
+                                                    <constraint firstAttribute="width" constant="584" id="WZw-bQ-rbe"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-Sc-FLC">
+                                                <rect key="frame" x="8" y="658" width="584" height="78"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="584" id="3X1-xm-d25"/>
+                                                    <constraint firstAttribute="height" constant="78" id="xzZ-Lg-6bh"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-sU-iCl">
+                                                <rect key="frame" x="160" y="766" width="280" height="40"/>
+                                                <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="GJf-ZE-PNZ"/>
+                                                    <constraint firstAttribute="width" constant="280" id="oEp-lh-RoZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="15"/>
+                                                <state key="normal" title="Edit Your Description and/or Quote">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="editButton:" destination="FhD-Kl-4ox" eventType="touchUpInside" id="i1B-cZ-VO7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dye-qB-D1o" secondAttribute="trailing" id="1W6-pY-O4L"/>
+                                            <constraint firstItem="dye-qB-D1o" firstAttribute="top" secondItem="ndH-zL-Dck" secondAttribute="top" id="8Lv-WA-vG4"/>
+                                            <constraint firstItem="OtH-qT-wSK" firstAttribute="top" secondItem="oIt-I0-v7I" secondAttribute="bottom" constant="20" id="Dmc-o4-s00"/>
+                                            <constraint firstItem="wcM-jb-QnQ" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="ItE-Z8-qnl"/>
+                                            <constraint firstItem="oix-nW-q8r" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="KVk-ep-0eA"/>
+                                            <constraint firstItem="wcM-jb-QnQ" firstAttribute="top" secondItem="oix-nW-q8r" secondAttribute="bottom" constant="20" id="LGv-w3-dnI"/>
+                                            <constraint firstItem="klK-0I-Udd" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="MSS-DW-fiK"/>
+                                            <constraint firstItem="J3Y-U2-NLM" firstAttribute="top" secondItem="OtH-qT-wSK" secondAttribute="bottom" constant="5" id="P10-5L-Dh1"/>
+                                            <constraint firstItem="oIt-I0-v7I" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="QFI-pJ-omH"/>
+                                            <constraint firstItem="J3Y-U2-NLM" firstAttribute="leading" secondItem="ndH-zL-Dck" secondAttribute="leading" constant="8" id="SrS-kv-kbl"/>
+                                            <constraint firstItem="MDH-bc-gYC" firstAttribute="top" secondItem="pCY-tv-M93" secondAttribute="bottom" constant="15" id="TT1-t6-91h"/>
+                                            <constraint firstItem="Sgp-sU-iCl" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="Tyc-kJ-jSP"/>
+                                            <constraint firstItem="EsQ-Px-yfU" firstAttribute="top" secondItem="dye-qB-D1o" secondAttribute="bottom" constant="10" id="UAl-vg-bBd"/>
+                                            <constraint firstItem="0HZ-Sc-FLC" firstAttribute="leading" secondItem="ndH-zL-Dck" secondAttribute="leading" constant="8" id="VYk-rS-Uhm"/>
+                                            <constraint firstItem="pCY-tv-M93" firstAttribute="top" secondItem="wcM-jb-QnQ" secondAttribute="bottom" constant="5" id="WZJ-ly-iPa"/>
+                                            <constraint firstItem="EsQ-Px-yfU" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="YbS-36-eWX"/>
+                                            <constraint firstAttribute="height" constant="900" id="Zf3-2M-JAg"/>
+                                            <constraint firstAttribute="trailing" secondItem="J3Y-U2-NLM" secondAttribute="trailing" constant="8" id="atv-NP-NWd"/>
+                                            <constraint firstItem="OtH-qT-wSK" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="esS-Iq-qIK"/>
+                                            <constraint firstItem="Sgp-sU-iCl" firstAttribute="top" secondItem="0HZ-Sc-FLC" secondAttribute="bottom" constant="30" id="fcZ-8g-dOA"/>
+                                            <constraint firstItem="oix-nW-q8r" firstAttribute="top" secondItem="EsQ-Px-yfU" secondAttribute="bottom" constant="5" id="hPd-uY-JHa"/>
+                                            <constraint firstItem="dye-qB-D1o" firstAttribute="leading" secondItem="ndH-zL-Dck" secondAttribute="leading" id="mOU-a6-mTN"/>
+                                            <constraint firstItem="oIt-I0-v7I" firstAttribute="top" secondItem="MDH-bc-gYC" secondAttribute="bottom" constant="5" id="ma6-VG-1os"/>
+                                            <constraint firstItem="0HZ-Sc-FLC" firstAttribute="top" secondItem="klK-0I-Udd" secondAttribute="bottom" constant="8" id="pj3-XZ-dRc"/>
+                                            <constraint firstAttribute="trailing" secondItem="0HZ-Sc-FLC" secondAttribute="trailing" constant="8" id="pkd-4j-aNB"/>
+                                            <constraint firstItem="klK-0I-Udd" firstAttribute="top" secondItem="J3Y-U2-NLM" secondAttribute="bottom" constant="20" id="reP-Om-bn1"/>
+                                            <constraint firstItem="pCY-tv-M93" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="ugj-qg-T2h"/>
+                                            <constraint firstItem="MDH-bc-gYC" firstAttribute="centerX" secondItem="ndH-zL-Dck" secondAttribute="centerX" id="y68-aK-uRX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ndH-zL-Dck" firstAttribute="top" secondItem="M53-NG-9u0" secondAttribute="top" id="Vlm-Vw-Feh"/>
+                                    <constraint firstAttribute="trailing" secondItem="ndH-zL-Dck" secondAttribute="trailing" id="dHq-PA-b7p"/>
+                                    <constraint firstItem="ndH-zL-Dck" firstAttribute="leading" secondItem="M53-NG-9u0" secondAttribute="leading" id="htv-5h-RNF"/>
+                                    <constraint firstAttribute="bottom" secondItem="ndH-zL-Dck" secondAttribute="bottom" id="ye0-nr-vAp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bny-1H-14I" firstAttribute="top" secondItem="M53-NG-9u0" secondAttribute="bottom" id="Skg-HU-vmE"/>
+                            <constraint firstItem="M53-NG-9u0" firstAttribute="top" secondItem="ATy-Uo-ia9" secondAttribute="top" id="aBz-wU-WLw"/>
+                            <constraint firstAttribute="trailing" secondItem="M53-NG-9u0" secondAttribute="trailing" id="dfQ-BN-XzP"/>
+                            <constraint firstItem="M53-NG-9u0" firstAttribute="leading" secondItem="ATy-Uo-ia9" secondAttribute="leading" id="ue3-OE-X0G"/>
+                            <constraint firstItem="ndH-zL-Dck" firstAttribute="width" secondItem="ATy-Uo-ia9" secondAttribute="width" id="yMq-qg-2qb"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="900"/>
+                    <connections>
+                        <outlet property="birthdayLabel" destination="oIt-I0-v7I" id="UDH-aA-W9b"/>
+                        <outlet property="descriptionTextView" destination="J3Y-U2-NLM" id="pDk-cl-kbS"/>
+                        <outlet property="favouriteQuoteTextView" destination="0HZ-Sc-FLC" id="mcc-A4-lQz"/>
+                        <outlet property="imageView" destination="pCY-tv-M93" id="nW1-sV-GTm"/>
+                        <outlet property="nameLabel" destination="oix-nW-q8r" id="GM0-CM-wp0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyD-Jd-aBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="1213"/>
+        </scene>
         <!--Add Favourite PersonVC-->
         <scene sceneID="cQG-gd-UW4">
             <objects>
@@ -162,6 +433,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePh-a2-Ht3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Favourite Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-T6-r9G">
+                                        <rect key="frame" x="209" y="46" width="182" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="182" id="AVj-IR-GX3"/>
+                                            <constraint firstAttribute="height" constant="21" id="arD-W2-beW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKy-uf-SN4">
                                         <rect key="frame" x="8" y="37" width="57" height="30"/>
                                         <constraints>
@@ -176,16 +457,6 @@
                                             <action selector="cancelButtonPressed:" destination="ZNE-gf-cqj" eventType="touchUpInside" id="mMs-rx-PJE"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Favourite Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-T6-r9G">
-                                        <rect key="frame" x="209" y="46" width="182" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="182" id="AVj-IR-GX3"/>
-                                            <constraint firstAttribute="height" constant="21" id="arD-W2-beW"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
