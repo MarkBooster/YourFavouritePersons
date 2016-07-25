@@ -9,30 +9,36 @@
 import UIKit
 
 class PersonDetailVC: UIViewController {
-
-
+    
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var favouriteQuoteTextView: UITextView!
     
-
+    var person: Person!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        nameLabel.text = person.namePerson
+        imageView.image = DataService.instance.imageForPath(person.imagePath)
+        birthdayLabel.text = person.personDateOfBirth
+        descriptionTextView.text = person.personDescription
+        favouriteQuoteTextView.text = person.personQuote
         
-
-
+        
+        
+        
     }
     
-
+    
     @IBAction func backButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    @IBAction func editButton(sender: AnyObject) {
-    }
-
+    
+    @IBOutlet weak var saveEditButton: UIButton!
+    
 }

@@ -14,19 +14,28 @@ class DataService {
     private var _loadedPersons = [Person]()
     
     var loadedPersons: [Person] {
-        return _loadedPersons
+        get {
+            return _loadedPersons
+        } set {
+            if newValue.count < _loadedPersons.count {
+                _loadedPersons = newValue
+            }
+        }
     }
+    
     
     func savePersons() {
         let personsData = NSKeyedArchiver.archivedDataWithRootObject(_loadedPersons)
         NSUserDefaults.standardUserDefaults().setObject(personsData, forKey: KEY_PERSONS)
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func loadPersons() {
         if let personsData = NSUserDefaults.standardUserDefaults().objectForKey(KEY_PERSONS) as? NSData {
             
             if let personsArray = NSKeyedUnarchiver.unarchiveObjectWithData(personsData) as? [Person] {
-                _loadedPersons = personsArray
+                self._loadedPersons = personsArray
+                self._loadedPersons = self._loadedPersons.reverse()
             }
             
         }
@@ -48,8 +57,8 @@ class DataService {
         return image
     }
     
-    func addPerson(post: Person) {
-        _loadedPersons.append(post)
+    func addPerson(person: Person) {
+        _loadedPersons.append(person)
         savePersons()
         loadPersons()
     }

@@ -25,6 +25,10 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -51,7 +55,44 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var person: Person
+        person = DataService.instance.loadedPersons[indexPath.row]
+        performSegueWithIdentifier("PersonDetailVC", sender: person)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PersonDetailVC" {
+            if let personDetailVC = segue.destinationViewController as? PersonDetailVC {
+                if let person = sender as? Person {
+                    personDetailVC.person = person
+                }
+            }
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            DataService.instance.loadedPersons.removeAtIndex(indexPath.row)
+            DataService.instance.savePersons()
+            DataService.instance.loadPersons()
+            tableView.reloadData()
+        }
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let deleteButton = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action, indexPath) in
+            self.tableView.dataSource?.tableView?(
+                self.tableView,
+                commitEditingStyle: .Delete,
+                forRowAtIndexPath: indexPath
+            )
+            return
+        })
         
+        deleteButton.backgroundColor = UIColor(red: 0.757, green: 0.129, blue: 0.169, alpha: 1.00)
+        
+        return [deleteButton]
     }
     
     func onPersonsLoaded(notif: AnyObject) {

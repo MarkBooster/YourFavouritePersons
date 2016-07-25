@@ -130,7 +130,6 @@
                                         <connections>
                                             <outlet property="namePersonLabel" destination="JUu-ek-dMC" id="xGn-dv-rIq"/>
                                             <outlet property="personImage" destination="0ZI-JQ-4xT" id="tbR-rM-UAF"/>
-                                            <segue destination="FhD-Kl-4ox" kind="show" id="sef-D9-0Cx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -154,6 +153,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="PQ6-uL-Lp4" id="8M3-hR-JKS"/>
+                        <segue destination="FhD-Kl-4ox" kind="show" identifier="PersonDetailVC" id="CwY-WM-fgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,7 +163,7 @@
         <!--Person DetailVC-->
         <scene sceneID="ZAs-Jy-LnQ">
             <objects>
-                <viewController id="FhD-Kl-4ox" customClass="PersonDetailVC" customModule="YourFavouritePersons" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonDetailVC" id="FhD-Kl-4ox" customClass="PersonDetailVC" customModule="YourFavouritePersons" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CVs-d8-1nr"/>
                         <viewControllerLayoutGuide type="bottom" id="bny-1H-14I"/>
@@ -339,19 +339,16 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-sU-iCl">
-                                                <rect key="frame" x="160" y="766" width="280" height="40"/>
+                                                <rect key="frame" x="150" y="766" width="300" height="40"/>
                                                 <color key="backgroundColor" red="0.76470588240000004" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="GJf-ZE-PNZ"/>
-                                                    <constraint firstAttribute="width" constant="280" id="oEp-lh-RoZ"/>
+                                                    <constraint firstAttribute="width" constant="300" id="oEp-lh-RoZ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="CaviarDreams-Bold" family="Caviar Dreams" pointSize="15"/>
-                                                <state key="normal" title="Edit Your Description and/or Quote">
+                                                <state key="normal" title="Save you edited Description or Quote">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="editButton:" destination="FhD-Kl-4ox" eventType="touchUpInside" id="i1B-cZ-VO7"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,6 +409,7 @@
                         <outlet property="favouriteQuoteTextView" destination="0HZ-Sc-FLC" id="mcc-A4-lQz"/>
                         <outlet property="imageView" destination="pCY-tv-M93" id="nW1-sV-GTm"/>
                         <outlet property="nameLabel" destination="oix-nW-q8r" id="GM0-CM-wp0"/>
+                        <outlet property="saveEditButton" destination="Sgp-sU-iCl" id="UJq-cr-aHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyD-Jd-aBn" userLabel="First Responder" sceneMemberID="firstResponder"/>
