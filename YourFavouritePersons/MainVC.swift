@@ -12,7 +12,6 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var persons = [Person]()
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

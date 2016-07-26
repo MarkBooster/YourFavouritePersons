@@ -29,11 +29,23 @@ class Person: NSObject, NSCoding {
     }
     
     var personDescription: String {
-        return _personDescription
+        get {
+            return _personDescription
+        } set {
+            if newValue != _personDescription {
+                _personDescription = newValue
+            }
+        }
     }
     
     var personQuote: String {
-        return _personQuote
+        get {
+            return _personQuote
+        } set {
+            if newValue != _personQuote {
+                _personQuote = newValue
+            }
+        }
     }
     
     init(imagePath: String, namePerson: String, personDateOfBirth: String, personDescription: String, personQuote: String) {
@@ -45,7 +57,6 @@ class Person: NSObject, NSCoding {
     }
     
     override init() {
-        
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
@@ -55,7 +66,6 @@ class Person: NSObject, NSCoding {
         self._personDateOfBirth = aDecoder.decodeObjectForKey("personDateOfBirth") as? String
         self._personDescription = aDecoder.decodeObjectForKey("personDescription") as? String
         self._personQuote = aDecoder.decodeObjectForKey("personQuote") as? String
-        
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -65,5 +75,4 @@ class Person: NSObject, NSCoding {
         aCoder.encodeObject(self._personDescription, forKey: "personDescription")
         aCoder.encodeObject(self._personQuote, forKey: "personQuote")
     }
-    
 }

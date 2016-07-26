@@ -10,7 +10,6 @@ import UIKit
 
 class PersonDetailVC: UIViewController {
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var birthdayLabel: UILabel!
@@ -19,7 +18,6 @@ class PersonDetailVC: UIViewController {
     
     var person: Person!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,37 +25,23 @@ class PersonDetailVC: UIViewController {
         imageView.image = DataService.instance.imageForPath(person.imagePath)
         birthdayLabel.text = person.personDateOfBirth
         descriptionTextView.text = person.personDescription
-        favouriteQuoteTextView.text = person.personQuote    
-        
+        favouriteQuoteTextView.text = person.personQuote
     }
-    
     
     @IBAction func backButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func saveEditButton(sender: AnyObject) {
-        if let name = nameLabel.text, let age = birthdayLabel.text, let desc = descriptionTextView.text, let quote = favouriteQuoteTextView.text, let img = imageView.image {
-            
-            let imgPath = DataService.instance.saveImageAndCreatePath(img)
-            
-            let person = Person(imagePath: imgPath, namePerson: name, personDateOfBirth: age, personDescription: desc, personQuote: quote)
-            DataService.instance.changePerson(person)
+        if person.personDescription != descriptionTextView.text || person.personQuote != favouriteQuoteTextView.text {
+            person.personDescription = descriptionTextView.text
+            person.personQuote = favouriteQuoteTextView.text
+            print(person.personDescription)
+            print(person.personQuote)
+            DataService.instance.savePersons()
             dismissViewControllerAnimated(true, completion: nil)
-            
         }
-        
     }
-
 }
 
-//        if let desc = descriptionTextView.text, let quote = favouriteQuoteTextView.text {
-//
-////            let person = Person(imagePath: imgPath, namePerson: name, personDateOfBirth: age, personDescription: desc, personQuote: quote)
-//            let person = Person(imagePath: "", namePerson: "", personDateOfBirth: "", personDescription: desc, personQuote: quote)
-//
-//            DataService.instance.changePerson(person)
-//            dismissViewControllerAnimated(true, completion: nil)
-//        }
-//
 

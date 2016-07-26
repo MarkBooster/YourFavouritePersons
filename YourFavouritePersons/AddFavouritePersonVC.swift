@@ -9,21 +9,26 @@
 import UIKit
 
 class AddFavouritePersonVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
     @IBOutlet weak var personImage: UIImageView!
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var personDescriptionTextField: UITextField!
     @IBOutlet weak var favouriteQuoteTextfield: UITextField!
     
+    var imagePath = ""
+    var name = ""
+    var age = ""
+    var desc = ""
+    var quote = ""
+    
     var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-
+        
     }
     
     @IBAction func addPictureButton(sender: UIButton) {
@@ -38,19 +43,23 @@ class AddFavouritePersonVC: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func makePostButton(sender: AnyObject) {
-        if let name = nameField.text, let age = dateTextField.text, let desc = personDescriptionTextField.text, let quote = favouriteQuoteTextfield.text, let img = personImage.image {
+        if personImage.image != nil && nameField.text != "" && dateTextField.text != "" && personDescriptionTextField.text != "" && favouriteQuoteTextfield.text != "" {
             
-            let imgPath = DataService.instance.saveImageAndCreatePath(img)
+            self.imagePath = DataService.instance.saveImageAndCreatePath(personImage.image!)
+            self.name = nameField.text!
+            self.age = dateTextField.text!
+            self.desc = personDescriptionTextField.text!
+            self.quote = favouriteQuoteTextfield.text!
             
-            let person = Person(imagePath: imgPath, namePerson: name, personDateOfBirth: age, personDescription: desc, personQuote: quote)
+            let person = Person(imagePath: imagePath, namePerson: name, personDateOfBirth: age, personDescription: desc, personQuote: quote)
             DataService.instance.addPerson(person)
             dismissViewControllerAnimated(true, completion: nil)
         }
-        
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
         personImage.image = image
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
+
