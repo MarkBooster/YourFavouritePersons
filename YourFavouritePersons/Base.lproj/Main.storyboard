@@ -349,6 +349,9 @@
                                                 <state key="normal" title="Save you edited Description or Quote">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveEditButton:" destination="FhD-Kl-4ox" eventType="touchUpInside" id="OMN-IM-3uM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.92000000000000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -409,7 +412,6 @@
                         <outlet property="favouriteQuoteTextView" destination="0HZ-Sc-FLC" id="mcc-A4-lQz"/>
                         <outlet property="imageView" destination="pCY-tv-M93" id="nW1-sV-GTm"/>
                         <outlet property="nameLabel" destination="oix-nW-q8r" id="GM0-CM-wp0"/>
-                        <outlet property="saveEditButton" destination="Sgp-sU-iCl" id="UJq-cr-aHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyD-Jd-aBn" userLabel="First Responder" sceneMemberID="firstResponder"/>

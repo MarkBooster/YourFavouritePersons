@@ -81,19 +81,18 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let deleteButton = UITableViewRowAction(style: .Default, title: "Delete", handler: { (action, indexPath) in
-            self.tableView.dataSource?.tableView?(
-                self.tableView,
-                commitEditingStyle: .Delete,
-                forRowAtIndexPath: indexPath
-            )
+        let deletebutton = UITableViewRowAction(style: .Normal, title: "Delete", handler: { (action, indexPath) in
+            self.tableView.dataSource?.tableView?(self.tableView, commitEditingStyle: .Delete, forRowAtIndexPath: indexPath)
+            
             return
         })
         
-        deleteButton.backgroundColor = UIColor(red: 0.757, green: 0.129, blue: 0.169, alpha: 1.00)
+        deletebutton.backgroundColor = UIColor(red: 0.757, green: 0.129, blue: 0.169, alpha: 1.00)
         
-        return [deleteButton]
+        return [deletebutton]
+
     }
+
     
     func onPersonsLoaded(notif: AnyObject) {
         tableView.reloadData()

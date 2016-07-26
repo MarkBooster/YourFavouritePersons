@@ -63,6 +63,12 @@ class DataService {
         loadPersons()
     }
     
+    func changePerson(person: Person) {
+        _loadedPersons.append(person)
+        savePersons()
+        loadPersons()
+    }
+    
     func documentsPathForFileName(name: String) -> String {
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let fullPath = path[0] as NSString
